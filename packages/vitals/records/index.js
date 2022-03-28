@@ -78,7 +78,7 @@ async function getRecords(args) {
 }
 
 async function router(args) {
-  console.log(args)
+  console.log(args.httpMethod)
   switch (args.httpMethod || '') {
     case 'get': return getRecords(args)
     case 'post': return addRecord(args)
